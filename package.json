@@ -1,0 +1,23 @@
+{
+  "name": "to-do-list-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roniy68/to-do-list-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roniy68/to-do-list-testing/issues"
+  },
+  "homepage": "https://github.com/roniy68/to-do-list-testing#readme",
+  "devDependencies": {
+    "jest": "^29.4.0"
+  }
+}
