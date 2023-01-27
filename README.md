@@ -120,10 +120,10 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-1. Hien Phan
-- GitHub: [@hienphan0111](https://github.com/hienphan0111)
-- Twitter: [@hienphan0111](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hien-phan-61097b256/)
+1. Ahmed Hasan Rony
+- GitHub: [@roniy68](https://github.com/roniy68)
+- Twitter: [@ahroniy](https://twitter.com/ahroniy)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ahroniy)
 
 1. Hien Phan
 - GitHub: [@hienphan0111](https://github.com/roniy68)
