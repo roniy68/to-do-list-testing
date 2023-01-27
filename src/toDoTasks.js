@@ -1,7 +1,7 @@
 import { getTasks, saveTasks } from './localStorage.js';
 
 const add = (task) => {
-  let tasks = getTasks();
+  const tasks = getTasks();
   task.index = tasks.length;
   tasks.push(task);
   saveTasks(tasks);
@@ -15,7 +15,7 @@ const remove = (taskIndex) => {
   // for (let i = index; i < tasks.length; i += 1) {
   //   tasks[i].index -= 1;
   // }
-  tasks.forEach((item, i) => item.index = i + 1);
+  tasks.forEach((item, i) => { item.index = i + 1 });
   saveTasks(tasks);
   return tasks;
 };

@@ -19,9 +19,9 @@ describe('Testing add method', () => {
       description: 'Meeting with coding partner',
       completed: false,
       index: 3,
-    }
+    },
   ];
-  
+
   const task = {
     description: 'Learn React',
     completed: false,
@@ -35,17 +35,16 @@ describe('Testing add method', () => {
   test('Add first task into list', () => {
     jest.spyOn(localStorage, 'getTasks').mockReturnValueOnce([]);
     jest.spyOn(localStorage, 'saveTasks').mockReturnValueOnce([].push(task));
-       
+
     expect(add(task)).toContainEqual(task);
   });
 
   test('Add task into list which have several tasks, the index should be 4', () => {
     jest.spyOn(localStorage, 'getTasks').mockReturnValueOnce(tasks);
     jest.spyOn(localStorage, 'saveTasks').mockReturnValueOnce(tasks.push(task));
-       
+
     expect(add(task)[3].index).toBe(4);
   });
-  
 });
 
 // Testing for remove function
@@ -71,7 +70,7 @@ describe('Testing remove method', () => {
       description: 'Read Programming book',
       completed: false,
       index: 4,
-    }
+    },
   ];
 
   beforeEach(() => {
@@ -81,21 +80,20 @@ describe('Testing remove method', () => {
   test('Remove last task of list', () => {
     jest.spyOn(localStorage, 'getTasks').mockReturnValueOnce(tasks);
     jest.spyOn(localStorage, 'saveTasks').mockReturnValueOnce(tasks);
-    
+
     const result = remove(3);
-    
+
     expect(result.length).toBe(3);
   });
 
   test('Remove the middle task and refresh index of list, the second task index should be 2', () => {
     jest.spyOn(localStorage, 'getTasks').mockReturnValueOnce(tasks);
     jest.spyOn(localStorage, 'saveTasks').mockReturnValueOnce(tasks);
-    
+
     const result = remove(2);
 
     expect(result[1].index).toBe(2);
 
     expect(result[1].description).toBe('Read Programming book');
   });
-  
 });
