@@ -12,7 +12,9 @@ const remove = (taskIndex) => {
   const tasks = getTasks();
   const index = tasks.findIndex((item) => item.index === taskIndex);
   tasks.splice(index, 1);
-  tasks.forEach((item, i) => { item.index = i + 1 });
+  tasks.forEach((item, i) => { 
+    item.index = i + 1;
+  });
   saveTasks(tasks);
   return tasks;
 };
