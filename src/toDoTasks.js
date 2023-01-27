@@ -1,28 +1,27 @@
+import { getTasks, saveTasks } from './localStorage.js';
+
 const add = (task) => {
-  let tasks = JSON.parse(localStorage.getItem('toDoList'));
-  if (tasks === null) {
-    tasks = [];
-  }
+  let tasks = getTasks();
   task.index = tasks.length + 1;
   tasks.push(task);
-  localStorage.setItem('toDoList', JSON.stringify(tasks));
+  saveTasks(tasks);
   return tasks;
 };
 
 const remove = (taskIndex) => {
-  const tasks = JSON.parse(localStorage.getItem('toDoList'));
+  const tasks = getTasks();
   const index = tasks.findIndex((item) => item.index === taskIndex);
   tasks.splice(index, 1);
   for (let i = index; i < tasks.length; i += 1) {
     tasks[i].index -= 1;
   }
-  localStorage.setItem('toDoList', JSON.stringify(tasks));
+  saveTasks(tasks);
 };
 
 const modify = (description, index) => {
-  const tasks = JSON.parse(localStorage.getItem('toDoList'));
+  const tasks = getTasks();
   tasks[index].description = description;
-  localStorage.setItem('toDoList', JSON.stringify(tasks));
+  saveTasks(tasks);
 };
 
 export { add, remove, modify };
