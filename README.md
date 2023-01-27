@@ -81,26 +81,20 @@ npm install
 ### Usage
 
 To run the project, execute the following command:
-
-<!--
-Example command:
-
+#### Dev Server
 ```sh
-  rails server
+    npm start
 ```
---->
+#### Build
+``` npm run build
+```
 
 ### Run tests
 
 To run tests, run the following command:
-
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+  npm test or npm run test
+ ```
 
 ### Deployment
 
