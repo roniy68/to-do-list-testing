@@ -1,16 +1,28 @@
+import { getTasks, saveTasks } from './localStorage.js';
+
 const updateStatusTask = (st, index) => {
-  const tasks = JSON.parse(localStorage.getItem('toDoList'));
+  const tasks = getTasks();
   tasks[index].completed = st;
-  localStorage.setItem('toDoList', JSON.stringify(tasks));
+  saveTasks(tasks);
 };
 
 const clearAllCompleted = () => {
-  const tasks = JSON.parse(localStorage.getItem('toDoList'));
+  const tasks = getTasks();
   const result = tasks.filter((item) => item.completed === false);
   result.forEach((item, index) => {
     item.index = index + 1;
   });
-  localStorage.setItem('toDoList', JSON.stringify(result));
+  saveTasks(result);
+  return result;
 };
 
-export { updateStatusTask, clearAllCompleted };
+const clearBtnAll = () => {
+  const btnClear = document.getElementById('clear-completed');
+
+  btnClear.addEventListener('click', () => {
+    clearAllCompleted();
+    // window.location.reload();
+  });
+};
+
+export { updateStatusTask, clearBtnAll, clearAllCompleted };

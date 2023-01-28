@@ -119,9 +119,10 @@ Example:
 - Twitter: [@ahroniy](https://twitter.com/ahroniy)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ahroniy)
 
-1. Hien Phan
-- GitHub: [@hienphan0111](https://github.com/roniy68)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ahroniy/)
+2. Hien Phan
+- GitHub: [@hienphan0111](https://github.com/hienphan0111)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hien-phan-61097b256/)
+- Twitter: [@hienphan0111](https://twitter.com/hienphan0111)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

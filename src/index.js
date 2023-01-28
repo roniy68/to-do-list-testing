@@ -1,6 +1,6 @@
 import './style.css';
 import { add, remove, modify } from './toDoTasks.js';
-import { updateStatusTask, clearAllCompleted } from './statusTask.js';
+import { updateStatusTask, clearBtnAll } from './statusTask.js';
 
 let toDoTasks = JSON.parse(localStorage.getItem('toDoList'));
 
@@ -109,9 +109,11 @@ cbTask.forEach((e, i) => {
 
 // Clear completed task
 
-const btnClear = document.getElementById('clear-completed');
+// const btnClear = document.getElementById('clear-completed');
 
-btnClear.addEventListener('click', () => {
-  clearAllCompleted();
-  window.location.reload();
-});
+// btnClear.addEventListener('click', () => {
+//   clearAllCompleted();
+//   window.location.reload();
+// });
+
+clearBtnAll();
