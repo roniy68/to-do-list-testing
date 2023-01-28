@@ -1,5 +1,7 @@
 /**
+ * 
  * @jest-environment jsdom
+ * 
  */
 
 import { updateStatusTask, clearBtnAll } from './statusTask.js';
@@ -38,7 +40,6 @@ describe('Testing editing method', () => {
     updateStatusTask(true, 2);
     expect(tasks[2].completed).toBe(true);
   });
-
 });
 
 // Testing for delete all completed task funciton
@@ -84,7 +85,7 @@ describe('Testing delete all completed task method', () => {
     const btnClear = document.getElementById('clear-completed');
     let result;
 
-    btnClear.addEventListener = jest.fn().mockImplementationOnce((event) => {
+    btnClear.addEventListener = jest.fn().mockImplementationOnce(() => {
       result = mockClearAll();
     });
 
@@ -92,7 +93,7 @@ describe('Testing delete all completed task method', () => {
 
     expect(btnClear.addEventListener).toBeCalledWith(
       'click',
-      expect.any(Function)
+      expect.any(Function),
     );
 
     expect(mockClearAll).toBeCalledTimes(1);

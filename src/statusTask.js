@@ -21,8 +21,8 @@ const clearBtnAll = () => {
 
   btnClear.addEventListener('click', () => {
     clearAllCompleted();
-    //window.location.reload();
+    // window.location.reload();
   });
-}
+};
 
 export { updateStatusTask, clearBtnAll, clearAllCompleted };
